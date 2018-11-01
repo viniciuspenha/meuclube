@@ -1,11 +1,11 @@
 package br.com.desbravadores.meuclube.model;
 
-import br.com.desbravadores.meuclube.enums.EnumFaixaEtaria;
-import br.com.desbravadores.meuclube.enums.EnumFuncao;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 
 @Data
 @Builder
@@ -15,8 +15,9 @@ public class Unidade {
 
     private Long id;
     private String nome;
-    private EnumFuncao funcao;
+    private LocalDate fundacao;
+    private Integer idadeMinima;
+    private Integer idadeMaxima;
     private String gritoDeGuerra;
-    private EnumFaixaEtaria faixaEtaria;
 
 }

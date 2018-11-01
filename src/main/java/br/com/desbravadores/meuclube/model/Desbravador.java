@@ -1,5 +1,6 @@
 package br.com.desbravadores.meuclube.model;
 
+import br.com.desbravadores.meuclube.enums.EnumCargoUnidade;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,5 +37,6 @@ public class Desbravador implements Serializable {
     private String telefoneMae;
     private String emailMae;
     private String nomeResponsavel;
+    private EnumCargoUnidade cargoUnidade;
 
 }
