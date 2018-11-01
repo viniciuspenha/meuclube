@@ -9,27 +9,27 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/desbravador")
-@Api(value = "Desbravador")
+@Api("Desbravador")
 public class DesbravadorController {
 
     @Autowired
     private DesbravadorService desbravadorService;
 
     @GetMapping("/{id}")
-    @ApiOperation(value = "Buscar um desbravador")
-    public Desbravador buscarDesbravador(@PathVariable String id) {
+    @ApiOperation("Busca um desbravador")
+    public Desbravador buscar(@PathVariable String id) {
         return desbravadorService.buscar(id);
     }
 
     @PostMapping
-    @ApiOperation(value = "Adicionar um desbravador")
-    public void salvarDesbravador(@RequestBody Desbravador desbravador) {
+    @ApiOperation("Cria um desbravador")
+    public void criar(@RequestBody Desbravador desbravador) {
         desbravadorService.salvar(desbravador);
     }
 
     @DeleteMapping("/{id}")
-    @ApiOperation(value = "Deletar um desbravador")
-    public void deletarDesbravador(@PathVariable String id) {
+    @ApiOperation("Deleta um desbravador")
+    public void deletar(@PathVariable String id) {
         desbravadorService.deletar(id);
     }
 }
