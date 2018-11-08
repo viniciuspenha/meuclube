@@ -1,6 +1,7 @@
 package br.com.desbravadores.meuclube.model;
 
 import br.com.desbravadores.meuclube.enums.EnumTipoEvento;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Document(collection = Evento.COLLECTION_NAME)
 public class Evento implements Serializable {
 
@@ -29,4 +31,5 @@ public class Evento implements Serializable {
     private BigDecimal valorUnitario;
     private EnumTipoEvento tipoEvento;
     private String descricao;
+
 }

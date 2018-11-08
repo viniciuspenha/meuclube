@@ -1,6 +1,7 @@
 package br.com.desbravadores.meuclube.model;
 
 import br.com.desbravadores.meuclube.enums.EnumFormaDePagamento;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +17,7 @@ import java.time.LocalDate;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Document(collection = Pagamento.COLLECTION_NAME)
 public class Pagamento implements Serializable {
 
@@ -29,4 +31,5 @@ public class Pagamento implements Serializable {
     private EnumFormaDePagamento formaDePagamento;
     private Evento evento;
     private String descricao;
+
 }
