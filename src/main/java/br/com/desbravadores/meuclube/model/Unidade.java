@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 
 import java.time.LocalDate;
 
@@ -13,7 +14,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Unidade {
 
-    private Long id;
+    @Id
+    private String id;
     private String nome;
     private LocalDate fundacao;
     private Integer idadeMinima;
