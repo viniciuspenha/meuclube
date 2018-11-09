@@ -29,6 +29,7 @@ dependencies {
 	runtime('org.springframework.boot:spring-boot-devtools')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310')
 
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.1'
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.6.1'

@@ -1,5 +1,6 @@
 package br.com.desbravadores.meuclube.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,6 +25,7 @@ public class Unidade implements Serializable {
     @Id
     private String id;
     private String nome;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate fundacao;
     private Integer idadeMinima;
     private Integer idadeMaxima;

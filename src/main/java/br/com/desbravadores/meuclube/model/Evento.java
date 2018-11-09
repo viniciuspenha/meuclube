@@ -1,6 +1,7 @@
 package br.com.desbravadores.meuclube.model;
 
 import br.com.desbravadores.meuclube.enums.EnumTipoEvento;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,6 +27,7 @@ public class Evento implements Serializable {
     @Id
     private String id;
     private String nome;
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime data;
     private Endereco local;
     private BigDecimal valorUnitario;
